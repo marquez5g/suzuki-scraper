@@ -27,7 +27,7 @@ price = gixxer_150_abs.find(class_=precio_class).text
 price = int(price.replace('$', '').replace(',', ''))
 
 # create csv file if it doesn't exist and appends data to it
-with open(csv_name, 'a') as csv_file:
+with open(csv_name, 'a', newline='', encoding='utf-8') as csv_file:
     # create a csv writer object
     writer = csv.writer(csv_file)
 
